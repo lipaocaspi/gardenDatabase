@@ -2,7 +2,7 @@
 
 #### Normalización
 
-
+![DER](https://raw.githubusercontent.com/lipaocaspi/gardenDatabase/main/DER.svg)
 
 #### Consultas SQL
 
