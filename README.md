@@ -30,6 +30,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`dimension`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`dimension` (
   `codigo_dimension` INT(10) NOT NULL,
   `alto` DECIMAL(15,2) NULL,
@@ -41,6 +42,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`proveedor`
 -- -----------------------------------------------------
+/* 1FN, 2FN */
 CREATE TABLE IF NOT EXISTS `garden`.`proveedor` (
   `codigo_proveedor` INT(11) NOT NULL,
   `nombre_proveedor` VARCHAR(50) NOT NULL,
@@ -50,6 +52,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`producto`
 -- -----------------------------------------------------
+/* 1FN, 2FN, 3FN y 4FN */
 CREATE TABLE IF NOT EXISTS `garden`.`producto` (
   `codigo_producto` VARCHAR(15) NOT NULL,
   `nombre` VARCHAR(70) NOT NULL,
@@ -84,6 +87,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`pais`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`pais` (
   `codigo_pais` INT(10) NOT NULL,
   `nombre_pais` VARCHAR(50) NOT NULL,
@@ -93,6 +97,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`region`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`region` (
   `codigo_region` INT(10) NOT NULL,
   `nombre_region` VARCHAR(50) NOT NULL,
@@ -109,6 +114,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`ciudad`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`ciudad` (
   `codigo_ciudad` INT(10) NOT NULL,
   `nombre_ciudad` VARCHAR(50) NOT NULL,
@@ -125,6 +131,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`tipo_direccion`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`tipo_direccion` (
   `codigo_tipo` INT(10) NOT NULL,
   `nombre_tipo` VARCHAR(30) NOT NULL,
@@ -134,6 +141,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`direccion`
 -- -----------------------------------------------------
+/* 1FN, 2FN, 3FN y 4FN */
 CREATE TABLE IF NOT EXISTS `garden`.`direccion` (
   `codigo_direccion` INT(10) NOT NULL,
   `linea_direccion1` VARCHAR(50) NOT NULL,
@@ -166,6 +174,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`oficina`
 -- -----------------------------------------------------
+/* 1FN, 2FN, 3FN y 4FN */
 CREATE TABLE IF NOT EXISTS `garden`.`oficina` (
   `codigo_oficina` VARCHAR(10) NOT NULL,
   `nombre_oficina` VARCHAR(30) NOT NULL,
@@ -182,6 +191,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`puesto`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`puesto` (
   `codigo_puesto` INT(10) NOT NULL,
   `nombre_puesto` VARCHAR(50) NOT NULL,
@@ -191,6 +201,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`extension`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`extension` (
   `codigo_extension` INT(10) NOT NULL,
   `numero_extension` VARCHAR(10) NOT NULL,
@@ -200,6 +211,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`empleado`
 -- -----------------------------------------------------
+/* 1FN, 2FN, 3FN y 4FN */
 CREATE TABLE IF NOT EXISTS `garden`.`empleado` (
   `codigo_empleado` INT(11) NOT NULL,
   `nombre` VARCHAR(50) NOT NULL,
@@ -240,6 +252,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`cliente`
 -- -----------------------------------------------------
+/* 1FN, 2FN, 3FN y 4FN */
 CREATE TABLE IF NOT EXISTS `garden`.`cliente` (
   `codigo_cliente` INT(11) NOT NULL,
   `nombre_cliente` VARCHAR(50) NOT NULL,
@@ -257,6 +270,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`estado`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`estado` (
   `codigo_estado` INT(10) NOT NULL,
   `nombre_estado` VARCHAR(15) NOT NULL,
@@ -266,6 +280,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`pedido`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`pedido` (
   `codigo_pedido` INT(11) NOT NULL,
   `fecha_pedido` DATE NOT NULL,
@@ -316,6 +331,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`forma_pago`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`forma_pago` (
   `codigo_forma` INT(10) NOT NULL,
   `nombre_forma` VARCHAR(40) NOT NULL,
@@ -325,6 +341,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`pago`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`pago` (
   `id_transaccion` VARCHAR(50) NOT NULL,
   `fecha_pago` DATE NOT NULL,
@@ -349,6 +366,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`tipo_telefono`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`tipo_telefono` (
   `codigo_tipo` INT(10) NOT NULL,
   `nombre_tipo` VARCHAR(20) NOT NULL,
@@ -358,6 +376,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`telefono`
 -- -----------------------------------------------------
+/* 1FN */
 CREATE TABLE IF NOT EXISTS `garden`.`telefono` (
   `codigo_telefono` INT(10) NOT NULL,
   `numero_telefono` VARCHAR(15) NOT NULL,
@@ -381,6 +400,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `garden`.`contacto`
 -- -----------------------------------------------------
+/* 1FN, 2FN, 3FN */
 CREATE TABLE IF NOT EXISTS `garden`.`contacto` (
   `codigo_contacto` INT(11) NOT NULL,
   `nombre_contacto` VARCHAR(30) NULL,
